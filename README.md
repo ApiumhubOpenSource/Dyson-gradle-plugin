@@ -11,13 +11,4 @@ The goal for doing that is being able to test mobile applications performing req
 
 ### Setup
 
-Releases are published to 
-[gradle plugins portal](https://plugins.gradle.org/plugin/com.apiumhub.dyson-ngrok).
-
-
-
-```groovy
-plugins {
-    id 'com.apiumhub.dyson-ngrok' version '0.1.0'
-}
-```
+This plugin is under active development, so it's not available publicly yet.
