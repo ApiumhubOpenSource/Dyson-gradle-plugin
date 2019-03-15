@@ -4,7 +4,7 @@ sudo: false
 before_install: chmod +x gradlew
 
 install: ./gradlew assemble
-script: travis_wait 20 ./gradlew check
+script: ./gradlew test
 
 after_success:
   - ./gradlew jacocoTestReport
