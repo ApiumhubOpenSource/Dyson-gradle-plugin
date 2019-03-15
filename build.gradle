@@ -1,0 +1,70 @@
+plugins {
+    id 'groovy'
+    id 'jacoco'
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish' version '0.9.10'
+    id 'net.researchgate.release' version '2.7.0'
+    id 'ru.vyarus.quality' version '3.1.1'
+    id 'ru.vyarus.github-info' version '1.1.0'
+    id 'com.github.ben-manes.versions' version '0.20.0'
+    id "pl.droidsonroids.jacoco.testkit" version "1.0.3"
+}
+
+sourceCompatibility = 1.8
+
+wrapper {
+    gradleVersion = '4.8.1'
+}
+
+repositories { jcenter() }
+dependencies {
+    testCompile('org.spockframework:spock-core:1.1-groovy-2.4') {
+        exclude module: 'groovy-all'
+    }
+}
+
+group = 'com.apiumhub'
+description = 'Gradle plugin to start a dyson fake server along with ngrok to provide a public URL for testing purposes on Android pipelines'
+
+github {
+    user 'diegoojeda'
+    license 'MIT'
+}
+
+
+
+pluginBundle {
+    description = ''
+    tags = []
+
+    plugins {
+        dysonNgrokPlugin {
+            id = 'com.apiumhub.dyson-ngrok'
+            displayName = project.description
+        }
+    }
+
+    
+}
+
+afterReleaseBuild {
+    dependsOn = [publishPlugins]
+    doLast {
+        logger.warn "RELEASED $project.group:$project.name:$project.version"
+    }
+}
+
+test {
+    testLogging {
+        events 'skipped', 'failed', 'standard_error'
+        exceptionFormat 'full'
+    }
+    maxHeapSize = '512m'
+    doLast {
+        sleep(1000)
+    }
+}
+
+dependencyUpdates.revision = 'release'
+jacocoTestReport.reports.xml.enabled = true
+generateJacocoTestKitProperties.destinationFile = file('build/jacoco/test.exec').absolutePath.replace("\\", '/')

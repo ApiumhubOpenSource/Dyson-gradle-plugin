@@ -1,0 +1,23 @@
+{
+  "generator-gradle-plugin": {
+    "githubUser": "diegoojeda",
+    "authorName": "Diego",
+    "authorEmail": "diego.ojeda@apiumhub.com",
+    "projectName": "gradle-dyson-ngrok-plugin",
+    "projectGroup": "com.apiumhub",
+    "projectPackage": "com.apiumhub",
+    "projectVersion": "0.1.0",
+    "projectDesc": "Gradle plugin to start a dyson fake server along with ngrok to provide a public URL for testing purposes on Android pipelines",
+    "pluginPortalDesc": "",
+    "targetJava": "1.8",
+    "pluginPortalTags": "",
+    "mirrorToJcenter": false,
+    "pluginPortalUseCustomGroup": false,
+    "bintrayUser": "",
+    "bintrayRepo": "",
+    "bintrayTags": "",
+    "bintraySignFiles": false,
+    "mavenCentralSync": false,
+    "usedGeneratorVersion": "1.7.0"
+  }
+}
