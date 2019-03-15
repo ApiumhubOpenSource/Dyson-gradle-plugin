@@ -3,11 +3,11 @@ jdk: oraclejdk8
 sudo: false
 before_install: chmod +x gradlew
 
-install: ./gradlew assemble --no-daemon
-script: travis_wait 20 ./gradlew check --no-daemon
+install: ./gradlew assemble
+script: travis_wait 20 ./gradlew check
 
 after_success:
-  - ./gradlew jacocoTestReport --no-daemon
+  - ./gradlew jacocoTestReport
   - bash <(curl -s https://codecov.io/bash) -F linux
 
 before_cache:

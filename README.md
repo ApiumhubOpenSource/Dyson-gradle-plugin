@@ -1,22 +1,13 @@
 # gradle-dyson-ngrok-plugin
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://www.opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/travis/diegoojeda/gradle-dyson-ngrok-plugin.svg)](https://travis-ci.org/diegoojeda/gradle-dyson-ngrok-plugin)
-[![Appveyor build status](https://ci.appveyor.com/api/projects/status/github/diegoojeda/gradle-dyson-ngrok-plugin?svg=true)](https://ci.appveyor.com/project/diegoojeda/gradle-dyson-ngrok-plugin)
 [![codecov](https://codecov.io/gh/diegoojeda/gradle-dyson-ngrok-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/diegoojeda/gradle-dyson-ngrok-plugin)
 
 ### About
 
+This is a gradle plugin that integrates Dyson and Ngrok to start a fake server and expose it's public URL to later inject it on your application.
 
-
-Features:
-* Feature 1
-* Feature 2
-
-##### Summary
-
-* Configuration: `dyson-ngrok`
-* Tasks:
-    - `task1` - brief task description       
+The goal for doing that is being able to test mobile applications performing requests to a fake server inside a device test lab (Firebase's, Amazon's...)
 
 ### Setup
 
@@ -30,8 +21,3 @@ plugins {
     id 'com.apiumhub.dyson-ngrok' version '0.1.0'
 }
 ```
-
-### Usage
-
----
-[![gradle plugin generator](http://img.shields.io/badge/Powered%20by-%20Gradle%20plugin%20generator-green.svg?style=flat-square)](https://github.com/xvik/generator-gradle-plugin)
