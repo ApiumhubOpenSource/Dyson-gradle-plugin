@@ -1,8 +1,6 @@
 # gradle-dyson-ngrok-plugin
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://www.opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/travis/diegoojeda/gradle-dyson-ngrok-plugin.svg)](https://travis-ci.org/diegoojeda/gradle-dyson-ngrok-plugin)
-[![codecov](https://codecov.io/gh/diegoojeda/gradle-dyson-ngrok-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/diegoojeda/gradle-dyson-ngrok-plugin)
-
+[![Build Status](https://travis-ci.org/ApiumhubOpenSource/Dyson-gradle-plugin.svg?branch=master)](https://travis-ci.org/ApiumhubOpenSource/Dyson-gradle-plugin)
 ### About
 
 This is a gradle plugin that integrates Dyson and Ngrok to start a fake server and expose it's public URL to later inject it on your application.
