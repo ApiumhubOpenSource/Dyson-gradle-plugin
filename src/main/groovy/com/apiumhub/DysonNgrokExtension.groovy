@@ -11,6 +11,7 @@ import groovy.transform.CompileStatic
 @CompileStatic
 class DysonNgrokExtension {
 
-    String foo
-    String bar
+    String dysonFolder
+    String subdomain
+    Integer port
 }
